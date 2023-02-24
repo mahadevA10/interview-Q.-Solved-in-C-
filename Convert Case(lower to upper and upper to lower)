@@ -1,0 +1,37 @@
+
+#include<bits/stdc++.h>
+
+#include<math.h>
+using namespace std;
+
+int main()
+{
+
+	string s = "hIIi";
+	int n = s.length();	
+	int i = 0;
+	while(s[i])
+	{
+	    int temp = s[i];
+	    
+		if (s[i] >=65 && s[i]<91)
+		{
+			temp = temp - 65;
+			temp = 97+temp;
+			s[i] = temp;
+		}
+		else if(s[i] >= 97 && s[i]<123)
+		{
+			
+			temp = temp-97;		
+			temp = 65+temp;
+			s[i] = temp;
+			
+		}
+		i = i+1;
+    }
+	
+	cout<<s;
+
+	return 0;
+}
