@@ -1,0 +1,61 @@
+///??????????????????????palindrom____________________________
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	cout<<n<<endl;
+	int t = 0;
+	if (n<0||(n>0 and n%10 ==0))
+	{
+		cout<<"false"<<endl;
+		return 0;
+	}
+
+	while(t < n)
+	{
+		t = t*10+n%10;
+		n = n/10;
+	}
+	cout<<n<<endl;
+	if (t == n||n==t/10)
+	{
+		cout<<"true"<<endl;
+	}
+	else 
+	cout<<"false"<<endl;
+
+	return 0;
+
+
+}
+
+//_______________________string palindrom_________________ 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+
+	string s;
+	getline(cin,s);
+	cout<< s<<endl;
+	int i = 0;
+	int j = s.length();
+	for ( i ; i<j/2;i++)
+	{
+		if(s[i] != s[j-i-1])
+		{
+			cout<<"not palindrom"<<endl;
+			return 0;
+		}
+	}
+	cout<<"palindrom number"<<endl;
+
+
+	return 0;
+
+}
